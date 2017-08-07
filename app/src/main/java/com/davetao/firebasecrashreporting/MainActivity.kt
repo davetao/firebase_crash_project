@@ -8,5 +8,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        try {
+            throw Exception("Random crash")
+        }
+        catch(e: Exception) {
+            e.printStackTrace()
+        }
     }
 }
